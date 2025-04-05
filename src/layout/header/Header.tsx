@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     return (
         <header>
             <nav className="flex h-24 items-center justify-between px-8">
-                <div className="flex items-center mr-4">
+                <div className="flex items-center mr-4 z-9 ">
                     <Link href="/">
                         <AbyssLogo/>
                     </Link>
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 
                         {/* Navigation Links */}
                         <Link
-                            className="hidden lg:block group text-gray-400 font-bold border dark:hover:text-white border-card-hover border-solid bg-blue-700 py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
+                            className="hidden lg:block group text-gray-400 font-bold border hover:text-white dark:hover:text-white border-card-hover border-solid bg-card-bg py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
                             href="/widgets">
                             <div className="flex justify-center items-center ">
                                 <span>Widgets</span>
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                             </div>
                         </Link>
                         <Link
-                            className="hidden lg:block group text-gray-400 font-bold border dark:hover:text-white border-card-hover border-solid bg-blue-700 py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
+                            className="hidden lg:block group text-gray-400 font-bold border hover:text-white dark:hover:text-white border-card-hover border-solid bg-card-bg py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
                             href="#">
                             <div className="flex justify-center items-center">
                                 <span>Requests</span>
@@ -43,9 +43,9 @@ const Header: React.FC = () => {
 
                 </div>
 
-                <div className="flex items-center justify-center gap-3">
+                <div className="flex items-center justify-center z-9 gap-3">
                     <Link
-                        className="group text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                        className="group text-gray-400 font-bold dark:hover:text-white hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
                         href="/widgets">
                         <div className="flex justify-center items-center">
                             <Icon icon="tabler:circle-plus" className="size-6"/>
