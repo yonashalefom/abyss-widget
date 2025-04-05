@@ -14,7 +14,7 @@ const SearchBar: React.FC = () => {
                     </svg>
                 </div>
                 <input id="default-search"
-                       className="outline-transparent block w-full ps-14 py-2 text-base text-gray-900 rounded-full placeholder-gray-400 bg-card-bg focus:ring-blue-500 focus:border-blue-500 dark:bg-card-bg dark:border-card-hover dark:placeholder-gray-400 dark:text-white text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                       className="outline-none block w-full ps-14 py-2 text-base rounded-full placeholder-gray-400 bg-card-bg focus:ring-blue-500 focus:border-blue-500 dark:bg-card-bg dark:border-card-hover dark:placeholder-gray-400 dark:text-white text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                        placeholder="Search" required/>
             </div>
         </form>
