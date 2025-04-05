@@ -7,6 +7,52 @@ This development plan outlines the strategy to transform the Figma design (Widge
 
 ---
 
+## 📌 Notes About The demo part
+
+## 🚀 Demo
+
+**Live Preview:** [Abyss Widget Demo](https://abyss-widget.vercel.app/)
+---
+
+This url shows what's possible in a short time, even without full resources. It's a foundation that can be extended and polished further.
+
+## ⚙️ Tech Stack
+
+- **Next.js**
+- **Tailwind CSS**
+- **TanStack Query**
+- **Content Variance Authority (CVA)**
+- **Iconify React**
+- **React Content Loader**
+
+> ⚠️ Some planned tools like **Redux**, **SCSS**, and **RTK Query** were not used due to time constraints.
+
+---
+
+## ✅ Done
+
+- Basic structure for **Widget List** and **Single Widget** pages
+- Static images for demo purposes
+- Some **reusable components**: `Tag`, `ListItem`
+- Quick setup showing what's achievable in limited time
+
+---
+
+## 🚧 Not Included
+
+- Global state (Redux)
+- API integration with RTK Query
+- SCSS styling
+- SVGs not served statically
+- Partial responsiveness
+- Some components not fully reusable or refactored
+
+---
+
+## 📌 Actual Implementation Plan Starts Here
+
+
+
 ## Tech Stack
 
 - **Next.js:** For server-side rendering and static site generation.
