@@ -22,7 +22,7 @@ export const ListItem = forwardRef<HTMLDivElement, ListItemProps>(
                 ref={ref}
                 role="article"
                 tabIndex={onItemClick ? 0 : -1}
-                className="dark:bg-card-bg rounded-xl border border-card-hover border-solid p-4 shadow-sm hover:bg-card-mouse-hover transition duration-200 relative cursor-pointer"
+                className="dark:bg-card-bg bg-card-bg rounded-xl border border-card-hover border-solid p-4 shadow-sm hover:bg-card-mouse-hover transition duration-200 relative cursor-pointer"
                 onClick={onItemClick}
             >
                 {/* Title Section */}

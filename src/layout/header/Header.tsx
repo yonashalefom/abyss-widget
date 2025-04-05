@@ -54,7 +54,7 @@ const Header: React.FC = () => {
                         </div>
                     </Link>
                     <Link
-                        className="group mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                        className="group mr-4 text-gray-400 font-bold dark:hover:text-white hover:text-white py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
                         href="/widgets">
                         <div className="flex justify-center items-center">
                             <Icon icon="tabler:bell-filled" className="size-6"/>

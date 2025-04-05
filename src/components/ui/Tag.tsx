@@ -9,7 +9,7 @@ const tagStyles = cva(
         variants: {
             // Define a "variant" prop for different color schemes if needed
             variant: {
-                default: 'bg-gray-100 text-gray-800 dark:bg-colorbadge dark:text-gray-300',
+                default: ' bg-colorbadge dark:bg-colorbadge text-gray-300 dark:text-gray-300',
                 // You could add more variants here (e.g., primary, secondary etc.)
                 primary: 'bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-100',
                 secondary: 'bg-green-100 text-green-800 dark:bg-green-600 dark:text-green-100',
