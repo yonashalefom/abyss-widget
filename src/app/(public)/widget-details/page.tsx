@@ -59,7 +59,7 @@ function SinglePost(props: { post: Post }) {
         <div className="flex justify-between items-center mt-4">
             <div className="flex items-center gap-2">
                 <button
-                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
                     <div className="flex justify-center items-center">
                         <Icon icon="tabler:message" className="size-4"/>
                         {' '}
@@ -67,13 +67,13 @@ function SinglePost(props: { post: Post }) {
                     </div>
                 </button>
                 <button
-                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
                     <div className="flex justify-center items-center">
                         <span className="ml-2">View Replies</span>
                     </div>
                 </button>
                 <button
-                    className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                    className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
                 >
                     <div className="flex justify-center items-center">
                         <Icon icon="tabler:dots" className="size-5"/>
@@ -82,7 +82,7 @@ function SinglePost(props: { post: Post }) {
             </div>
             <div className="flex items-center">
                 <button
-                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-l-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-l-full  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
                     <div className="flex justify-center items-center">
                         <Icon icon="tabler:thumb-up" className="size-4"/>
                         {' '}
@@ -90,7 +90,7 @@ function SinglePost(props: { post: Post }) {
                     </div>
                 </button>
                 <button
-                    className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-r-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                    className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-r-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
                 >
                     <div className="flex justify-center items-center mr-2">
                         <Icon icon="tabler:thumb-down" className="size-5"/>
@@ -103,7 +103,7 @@ function SinglePost(props: { post: Post }) {
             <div className="flex justify-between items-center mt-4">
                 <div className="flex items-center gap-2">
                     <button
-                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
                         <div className="flex justify-center items-center">
                             <Icon icon="tabler:message" className="size-4"/>
                             {' '}
@@ -111,13 +111,13 @@ function SinglePost(props: { post: Post }) {
                         </div>
                     </button>
                     <button
-                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
                         <div className="flex justify-center items-center">
                             <span className="ml-2">View Replies</span>
                         </div>
                     </button>
                     <button
-                        className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                        className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
                     >
                         <div className="flex justify-center items-center">
                             <Icon icon="tabler:dots" className="size-5"/>
@@ -126,7 +126,7 @@ function SinglePost(props: { post: Post }) {
                 </div>
                 <div className="flex items-center">
                     <button
-                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-l-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-l-full  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
                         <div className="flex justify-center items-center">
                             <Icon icon="tabler:thumb-up" className="size-4"/>
                             {' '}
@@ -134,7 +134,7 @@ function SinglePost(props: { post: Post }) {
                         </div>
                     </button>
                     <button
-                        className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-r-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                        className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white cursor-pointer hover:text-white   py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-r-full text-base  dark:hover:bg-abyssaccent hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
                     >
                         <div className="flex justify-center items-center mr-2">
                             <Icon icon="tabler:thumb-down" className="size-5"/>
@@ -192,7 +192,7 @@ const WidgetDetails = () => {
 
                     {/* Call to Action button */}
                     <button
-                        className="w-full bg-[#45321d] text-yellow-500 hover:bg-yellow-700 hover:text-white font-semibold py-2 rounded-lg transition-colors">
+                        className="w-full bg-[#45321d] text-yellow-500 hover:bg-yellow-700  cursor-pointer hover:text-white font-semibold py-2 rounded-lg transition-colors">
                         GET STARTED
                     </button>
                 </div>
