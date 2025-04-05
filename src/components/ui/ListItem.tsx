@@ -1,7 +1,8 @@
 import {Icon} from "@iconify/react";
 import Tag from "@/components/ui/Tag";
+import {ListItemData} from "@/app/(public)/widgets/page";
 
-export default function ListItem({ title, rating, shopName, views, requests, tags }) {
+export default function ListItem({ title, rating, shopName, views, requests, tags }: ListItemData) {
     return (
         <div className="dark:bg-card-bg rounded-xl border border-card-hover border-solid p-4 shadow-sm hover:bg-card-mouse-hover transition duration-200 relative cursor-pointer">
             {/* Title */}

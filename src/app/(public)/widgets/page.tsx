@@ -6,8 +6,7 @@ import React from 'react';
 import ListItemShimmer from "@/components/ui/loaders/ListItemShimmer";
 
 // TypeScript type for list item data
-type ListItemData = {
-    id: string; // Added for unique keys
+export type ListItemData = {
     title: string;
     rating: number;
     shopName: string;
@@ -38,7 +37,7 @@ function List() {
         queryKey: ['listItems'],
         queryFn: fetchListItems,
         staleTime: 5 * 60 * 1000, // 5 minutes - data considered fresh
-        cacheTime: 30 * 60 * 1000, // 30 minutes - cached data kept
+        gcTime: 30 * 60 * 1000, // 30 minutes - cached data kept
         retry: 2, // Retry failed requests twice
     });
 

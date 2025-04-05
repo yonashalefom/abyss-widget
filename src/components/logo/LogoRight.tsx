@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo1 from '@/assets/logo/logo-1.svg';
 
 // @todo Take the svg to assets folder
 const LogoRight: React.FC = () => {
