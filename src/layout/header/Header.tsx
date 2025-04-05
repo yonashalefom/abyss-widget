@@ -14,29 +14,33 @@ const Header: React.FC = () => {
                     </Link>
                 </div>
 
-                <div className="hidden md:flex items-center justify-center gap-3 max-w-[760px]">
-                    {/* Search Bar */}
-                        <SearchBar />
+                <div className='xl:absolute w-full xl:-ml-8.5'>
+                    <div className=" hidden md:flex container mx-auto  lg:max-w-[760px] gap-x-4">
+                        {/* Search Bar */}
+                        <SearchBar/>
 
-                    {/* Navigation Links */}
-                    <Link
-                        className="group text-gray-400 font-bold border dark:hover:text-white border-card-hover border-solid bg-blue-700 py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
-                        href="/widgets">
-                        <div className="flex justify-center items-center ">
-                            <span>Widgets</span>
-                            {' '}
-                            <Icon icon="lucide:stars" className="ml-2 size-4 text-yellow-400 dark:group-hover:text-white" />
-                        </div>
-                    </Link>
-                    <Link
-                        className="group text-gray-400 font-bold border dark:hover:text-white border-card-hover border-solid bg-blue-700 py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
-                        href="#">
-                        <div className="flex justify-center items-center">
-                            <span>Requests</span>
-                            {' '}
-                            <Icon icon="fa6-solid:bell-concierge" className="ml-2 size-4" />
-                        </div>
-                    </Link>
+                        {/* Navigation Links */}
+                        <Link
+                            className="hidden lg:block group text-gray-400 font-bold border dark:hover:text-white border-card-hover border-solid bg-blue-700 py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
+                            href="/widgets">
+                            <div className="flex justify-center items-center ">
+                                <span>Widgets</span>
+                                {' '}
+                                <Icon icon="lucide:stars"
+                                      className="ml-2 size-4 text-yellow-400 dark:group-hover:text-white"/>
+                            </div>
+                        </Link>
+                        <Link
+                            className="hidden lg:block group text-gray-400 font-bold border dark:hover:text-white border-card-hover border-solid bg-blue-700 py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base dark:bg-card-bg dark:hover:bg-abyssaccent dark:border-card-hover focus:outline-none dark:focus:ring-blue-800"
+                            href="#">
+                            <div className="flex justify-center items-center">
+                                <span>Requests</span>
+                                {' '}
+                                <Icon icon="fa6-solid:bell-concierge" className="ml-2 size-4"/>
+                            </div>
+                        </Link>
+                    </div>
+
                 </div>
 
                 <div className="flex items-center justify-center gap-3">
