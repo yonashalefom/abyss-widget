@@ -27,7 +27,7 @@ const Header: React.FC = () => {
                                 <span>Widgets</span>
                                 {' '}
                                 <Icon icon="lucide:stars"
-                                      className="ml-2 size-4 text-yellow-400 dark:group-hover:text-white"/>
+                                      className="ml-2 size-4 text-yellow-400 group-hover:text-white dark:group-hover:text-white"/>
                             </div>
                         </Link>
                         <Link
