@@ -5,6 +5,7 @@ import {useState} from "react";
 import Image from "next/dist/client/legacy/image";
 import {Icon} from "@iconify/react";
 import Tag from "@/components/ui/Tag";
+import Link from "next/link";
 
 type Post = {
     username: string;
@@ -20,12 +21,8 @@ const samplePosts: Post[] = [
     {
         username: 'doloroque',
         timestamp: '2 days ago (edited)',
-        content:
-            "I wouldn't call concurrent.futures more 'advanced' - it's a simpler interface that works very much the same regardless of whether you use multiple threads or multiple processes as the underlying parallelization gimmick.",
-        codeSnippet: `Personally I think that to import multiprocessing as mp
-def mp_factorizer_map(nums, nprocs):
-    with mp.Pool(nprocs) as pool:
-        return [(num, factors) for num, factors in zip(nums, pool.map(factorize_naive, nums))]`,
+        content: "I wouldnt call concurrent.futures more \"advanced\" - it's a simpler interface that works very much the same regardless of whether you use multiple threads or multiple processes as the underlying parallelization gimmick. Personally I think that to import multiprocessing as mp def mp_factorizer_map(nums, nprocs): with mp.Pool(nprocs) as pool: return {num:factors for num, factors in zip(nums, pool.map(factorize_naive, nums))}",
+        codeSnippet: `Personally I think that to import multiprocessing as mp def mp_factorizer_map(nums, nprocs): with mp.Pool(nprocs) as pool: return [(num, factors) for num, factors in zip(nums, pool.map(factorize_naive, nums))]`,
         likes: 18000,
         repliesCount: 2,
     },
@@ -43,6 +40,112 @@ def mp_factorizer_map(nums, nprocs):
     },
 ];
 
+function SinglePost(props: { post: Post }) {
+    return <div className=" rounded mb-8">
+        <div className="flex items-center space-x-2">
+            <Image
+                src="/assets/logo/logo-1.svg"
+                alt="User avatar"
+                width={35}
+                height={35}
+                className="w-6 h-6 rounded-full"
+            />
+            <Link href="#" className="ml-2 text-gray-300 font-bold hover:text-gray-200">
+                {props.post.username}
+            </Link>
+            <span className="text-gray-500 text-sm">{props.post.timestamp}</span>
+        </div>
+        <p className="text-white leading-relaxed mt-2">{props.post.content}</p>
+        <div className="flex justify-between items-center mt-4">
+            <div className="flex items-center gap-2">
+                <button
+                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                    <div className="flex justify-center items-center">
+                        <Icon icon="tabler:message" className="size-4"/>
+                        {' '}
+                        <span className="ml-2">Reply</span>
+                    </div>
+                </button>
+                <button
+                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                    <div className="flex justify-center items-center">
+                        <span className="ml-2">View Replies</span>
+                    </div>
+                </button>
+                <button
+                    className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                >
+                    <div className="flex justify-center items-center">
+                        <Icon icon="tabler:dots" className="size-5"/>
+                    </div>
+                </button>
+            </div>
+            <div className="flex items-center">
+                <button
+                    className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-l-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                    <div className="flex justify-center items-center">
+                        <Icon icon="tabler:thumb-up" className="size-4"/>
+                        {' '}
+                        <span className="ml-2">Like</span>
+                    </div>
+                </button>
+                <button
+                    className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-r-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                >
+                    <div className="flex justify-center items-center mr-2">
+                        <Icon icon="tabler:thumb-down" className="size-5"/>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div className="pl-12 mt-6">
+            <p className="text-white leading-relaxed mt-2">{props.post.codeSnippet}</p>
+            <div className="flex justify-between items-center mt-4">
+                <div className="flex items-center gap-2">
+                    <button
+                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                        <div className="flex justify-center items-center">
+                            <Icon icon="tabler:message" className="size-4"/>
+                            {' '}
+                            <span className="ml-2">Reply</span>
+                        </div>
+                    </button>
+                    <button
+                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                        <div className="flex justify-center items-center">
+                            <span className="ml-2">View Replies</span>
+                        </div>
+                    </button>
+                    <button
+                        className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                    >
+                        <div className="flex justify-center items-center">
+                            <Icon icon="tabler:dots" className="size-5"/>
+                        </div>
+                    </button>
+                </div>
+                <div className="flex items-center">
+                    <button
+                        className="group text-sm bg-card-mouse-hover text-gray-400 font-bold dark:hover:text-white  py-2 px-4 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-l-full  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800">
+                        <div className="flex justify-center items-center">
+                            <Icon icon="tabler:thumb-up" className="size-4"/>
+                            {' '}
+                            <span className="ml-2">Like</span>
+                        </div>
+                    </button>
+                    <button
+                        className="group bg-card-mouse-hover  mr-4 text-gray-400 font-bold dark:hover:text-white  py-2 px-2 hover:bg-accent focus:ring-4 focus:ring-blue-300 rounded-r-full text-base  dark:hover:bg-abyssaccent focus:outline-none dark:focus:ring-blue-800"
+                    >
+                        <div className="flex justify-center items-center mr-2">
+                            <Icon icon="tabler:thumb-down" className="size-5"/>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>;
+}
+
 const WidgetDetails = () => {
     const [inputText, setInputText] = useState<string>('');
 
@@ -55,7 +158,7 @@ const WidgetDetails = () => {
             <h2 className="text-4xl font-bold mb-4 line-clamp-1 ">GoogleAds Airline Flights content generation</h2>
 
             <div className="flex flex-col md:flex-row w-full gap-4">
-                <div className="w-full md:w-7/10 gap-2 bg-gray-300 rounded-2xl overflow-hidden">
+                <div className="w-full md:w-7/10 gap-2 bg-card-mouse-hover rounded-2xl overflow-hidden">
                     <img
                         src="/assets/bg/marketing_campaign.png"
                         alt="Google Ads Content Generator"
@@ -111,19 +214,17 @@ const WidgetDetails = () => {
             {/* Example Output */}
             <div className="mt-4 pt-4">
                 <h3 className="font-semibold mb-2 text-xl text-gray-500">Example Output</h3>
-                <div className="w-fit flex items-center gap-2 bg-gray-800 py-2.5 pl-2.5 pr-5 rounded-lg">
-                    {/*<span className="text-white bg-gray-600 p-1 rounded">📄</span>*/}
+                <div className="w-fit flex items-center gap-2 bg-card-mouse-hover py-2.5 pl-2.5 pr-5 rounded-lg">
                     <Icon icon="tabler:file-text" className="size-10"/>
                     <div className="flex flex-col">
                         <span className="text-gray-300 text-base">Marketing_Campaign.pdf</span>
                         <span className="text-gray-500 text-xs">example output</span>
                     </div>
-
                 </div>
             </div>
 
             {/* Input Area */}
-            <div className="flex items-center space-x-4 mt-4">
+            <div className="flex items-center space-x-4 mt-16 border-b-2 rounded-2xl border-card-hover">
                 <Image
                     src="/assets/logo/logo-1.svg"
                     alt="User avatar"
@@ -135,7 +236,7 @@ const WidgetDetails = () => {
                     type="text"
                     value={inputText}
                     onChange={handleInputChange}
-                    className="flex-1 bg-gray-700 border border-gray-600 rounded p-2 text-gray-300 placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                    className="flex-1 rounded p-2 text-gray-300 placeholder-gray-400 focus:outline-none"
                     placeholder="Share your thoughts..."
                 />
             </div>
@@ -143,47 +244,9 @@ const WidgetDetails = () => {
             {/* Posts Container */}
             <div className="mt-6">
                 {samplePosts.map((post, index) => (
-                    <div key={index} className="bg-gray-900 p-4 rounded mb-4">
-                        <div className="flex items-center space-x-2">
-                            <Image
-                                src="/avatar.png"
-                                alt="User avatar"
-                                width={24}
-                                height={24}
-                                className="w-6 h-6 rounded-full"
-                            />
-                            <a href="#" className="text-gray-300 font-bold hover:text-gray-200">
-                                {post.username}
-                            </a>
-                            <span className="text-gray-500 text-sm">{post.timestamp}</span>
-                        </div>
-                        <p className="text-white leading-relaxed mt-2">{post.content}</p>
-                        <pre
-                            className="bg-gray-800 p-4 rounded text-gray-200 font-mono text-sm mt-2 whitespace-pre-wrap">
-                {post.codeSnippet}
-              </pre>
-                        <div className="flex items-center space-x-4 mt-4">
-                            <button
-                                className="text-gray-400 hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                💬 Reply
-                            </button>
-                            <a href="#" className="text-gray-400 hover:text-gray-200">
-                                View replies ({post.repliesCount})
-                            </a>
-                            <button
-                                className="text-gray-400 hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                ❤️ {post.likes.toLocaleString()}
-                            </button>
-                            <button
-                                className="text-gray-400 hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                👎
-                            </button>
-                        </div>
-                    </div>
+                    <SinglePost key={index} post={post}/>
                 ))}
             </div>
-            {/*</div>*/}
-            {/*</div>*/}
         </div>
     );
 };
