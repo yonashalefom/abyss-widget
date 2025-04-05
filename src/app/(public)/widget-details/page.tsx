@@ -41,7 +41,7 @@ def mp_factorizer_map(nums, nprocs):
 ];
 
 function SinglePost(props: { post: Post }) {
-    return <div className=" rounded mb-8">
+    return <div className="rounded mb-8">
         <div className="flex items-center space-x-2">
             <Image
                 src="/assets/logo/logo-1.svg"
@@ -167,7 +167,7 @@ const WidgetDetails = () => {
                 </div>
 
                 <div
-                    className="w-full md:w-3/10 h-1/2 md:h-[315px] dark:bg-card-bg text-white p-4 rounded-2xl shadow-lg flex flex-col justify-center">
+                    className="w-full md:w-3/10 h-1/2 md:h-[315px] dark:bg-card-bg bg-card-bg text-white p-4 rounded-2xl shadow-lg flex flex-col justify-center">
                     {/* Rating section */}
                     <div className="flex flex-col items-center bg-[#0f1013] py-2 rounded-md">
                         <div className="text-2xl font-bold mb-2">3.6</div>
