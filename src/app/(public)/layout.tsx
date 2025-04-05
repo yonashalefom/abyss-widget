@@ -22,6 +22,7 @@ const queryClient = new QueryClient({
 export default function WidgetsLayout({ children }: WidgetsLayoutProps) {
     return (
         <QueryClientProvider client={queryClient}>
+
             <Header/>
             {children}
         </QueryClientProvider>
