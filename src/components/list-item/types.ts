@@ -1,5 +1,5 @@
 export interface ListItemMetrics {
-    views: number;
+    views: string;
     requests: number;
 }
 

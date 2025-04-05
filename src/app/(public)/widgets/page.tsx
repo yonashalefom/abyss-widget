@@ -10,7 +10,7 @@ export type ListItemData = {
     title: string;
     rating: number;
     shopName: string;
-    views: number;
+    views: string;
     requests: number;
     tags: string[];
 };
@@ -75,7 +75,7 @@ function List() {
                     key={idx}
                     title={item.title}
                     shopName={item.shopName}
-                    metrics={{views: Number(item.views), requests: Number(item.requests)}}
+                    metrics={{views: item.views, requests: Number(item.requests)}}
                     rating={{value: item.rating}}
                     tags={item.tags}
                     onItemClick={handleRedirect}
