@@ -41,10 +41,8 @@ This url shows what's possible in a short time, even without full resources. It'
 ## 🚧 Not Included
 
 - Global state (Redux)
-- API integration with RTK Query
 - SCSS styling
 - SVGs not served statically
-- Partial responsiveness
 - Some components not fully reusable or refactored
 
 ---
