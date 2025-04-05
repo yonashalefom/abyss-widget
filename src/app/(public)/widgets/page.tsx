@@ -1,21 +1,20 @@
 'use client';
 
-import ListItem from '@/components/ui/ListItem';
 import {useQuery} from '@tanstack/react-query';
 import React from 'react';
 import ListItemShimmer from "@/components/ui/loaders/ListItemShimmer";
+import {ListItem} from "@/components/list-item/ListItem";
 
-// TypeScript type for list item data
 export type ListItemData = {
     title: string;
     rating: number;
     shopName: string;
-    views: string;
-    requests: string;
+    views: number;
+    requests: number;
     tags: string[];
 };
 
-// API fetch function with improved error handling
+// region API fetch function with improved error handling
 const fetchListItems = async (): Promise<ListItemData[]> => {
     try {
         const response = await fetch(
@@ -30,10 +29,11 @@ const fetchListItems = async (): Promise<ListItemData[]> => {
         throw error;
     }
 };
+// endregion
 
-// List component using React Query
+// region List components using React Query
 function List() {
-    const { data, isLoading, isError } = useQuery<ListItemData[], Error>({
+    const {data, isLoading, isError} = useQuery<ListItemData[], Error>({
         queryKey: ['listItems'],
         queryFn: fetchListItems,
         staleTime: 5 * 60 * 1000, // 5 minutes - data considered fresh
@@ -44,8 +44,8 @@ function List() {
     if (isLoading) {
         return (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {Array.from({ length: 16 }).map((_, index) => (
-                    <ListItemShimmer key={index} />
+                {Array.from({length: 16}).map((_, index) => (
+                    <ListItemShimmer key={index}/>
                 ))}
             </div>
         );
@@ -62,22 +62,29 @@ function List() {
     }
 
     return (
-        <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {data?.map((item, idx) => (
-                    <ListItem key={idx} {...item} />
-                ))}
-            </div>
-        </>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {data?.map((item, idx) => (
+                <ListItem
+                    key={idx}
+                    title={item.title}
+                    shopName={item.shopName}
+                    metrics={{views: Number(item.views), requests: Number(item.requests)}}
+                    rating={{value: item.rating}}
+                    tags={item.tags}
+                    renderTitle={(title) => (
+                        <h2 className="custom-title-class">{title}</h2>
+                    )}
+                />
+            ))}
+        </div>
     );
 }
+// endregion
 
-// Page component (synchronous, since data fetching is client-side)
 export default function Widgets() {
     return (
         <div className="container mx-auto px-8 max-w-[820px] pb-4">
-            <List />
+            <List/>
         </div>
     );
 }
