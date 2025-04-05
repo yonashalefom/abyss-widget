@@ -2,7 +2,7 @@ import ContentLoader from "react-content-loader";
 
 const ListItemShimmer: React.FC = () => {
     return (
-        <div className="dark:bg-card-bg rounded-xl border border-card-hover border-solid shadow-sm p-4">
+        <div className="dark:bg-card-bg bg-card-bg  rounded-xl border border-card-hover border-solid shadow-sm p-4">
             <ContentLoader
                 speed={2}
                 width="100%"
