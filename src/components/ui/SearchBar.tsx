@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBar: React.FC = () => {
     return (
-        <form className="mx-auto overflow-hidden">
+        <form className="mx-auto overflow-hidden w-full">
             <label htmlFor="default-search"
                    className="pl-6 mb-2 text-base font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div className="relative">
