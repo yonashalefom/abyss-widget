@@ -13,7 +13,6 @@ export const ListItem = forwardRef<HTMLDivElement, ListItemProps>(
             rating,
             tags,
             onItemClick,
-            renderTitle,
         },
         ref
     ) => {
@@ -28,13 +27,9 @@ export const ListItem = forwardRef<HTMLDivElement, ListItemProps>(
             >
                 {/* Title Section */}
                 <header className="flex justify-between items-center">
-                    {renderTitle ? (
-                        renderTitle(title)
-                    ) : (
-                        <h3 className="line-clamp-1 text-lg font-medium text-white">
-                            {title}
-                        </h3>
-                    )}
+                    <h3 className="line-clamp-1 text-lg font-medium text-white">
+                        {title}
+                    </h3>
                 </header>
 
                 {/* Shop Info Section */}

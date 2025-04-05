@@ -4,6 +4,7 @@ import {useQuery} from '@tanstack/react-query';
 import React from 'react';
 import ListItemShimmer from "@/components/ui/loaders/ListItemShimmer";
 import {ListItem} from "@/components/list-item/ListItem";
+import {useRouter} from "next/navigation";
 
 export type ListItemData = {
     title: string;
@@ -33,6 +34,12 @@ const fetchListItems = async (): Promise<ListItemData[]> => {
 
 // region List components using React Query
 function List() {
+    const router = useRouter();
+
+    const handleRedirect = () => {
+        router.push('/widget-details'); // Redirects to /widget-details
+    };
+
     const {data, isLoading, isError} = useQuery<ListItemData[], Error>({
         queryKey: ['listItems'],
         queryFn: fetchListItems,
@@ -71,9 +78,7 @@ function List() {
                     metrics={{views: Number(item.views), requests: Number(item.requests)}}
                     rating={{value: item.rating}}
                     tags={item.tags}
-                    renderTitle={(title) => (
-                        <h2 className="custom-title-class">{title}</h2>
-                    )}
+                    onItemClick={handleRedirect}
                 />
             ))}
         </div>
